@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="alert">
+            <p class="text">404 | Not Found</p>
+        </div>
+    </body>
+</html>
+
+<style>
+
+.alert{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: black; 
+    padding: 10vh 10vw;
+    border-radius: 10px;
+}
+
+.text{
+    color: white; 
+    font-size: 2.5em; 
+    inline-size: max-content;
+    font-family: 'Mukta', sans-serif;
+}
+
+@media screen and (orientation: portrait){
+    .alert{
+        padding: 10vh 20vw;
+    }
+}
+
+</style>
+
+<script>
+
+var r = 0, g = 92, b = 76, speed = 1;
+
+document.addEventListener("DOMContentLoaded", rainbowWheel);
+
+function rainbowWheel () {
+    document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 50)`;
+
+	if (r > 0 && b == 0){
+        r--;
+        g++;
+    }
+
+    if (g > 0 && r == 0){
+        g--;
+        b++;
+    }
+
+    if(b > 0 && g == 0){
+        b--;
+        r++;
+    }
+
+	setTimeout(function() {
+		rainbowWheel();
+	}, 100);
+}
+
+</script>

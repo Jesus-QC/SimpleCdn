@@ -1,0 +1,12 @@
+{
+  "name": "simplecdn",
+  "version": "1.0.0",
+  "description": "A simple cdn made with express.js",
+  "main": "main.js",
+  "scripts": {},
+  "author": "Jesus-QC",
+  "license": "none",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
